@@ -56,7 +56,14 @@ const Navbar = () => {
 
                                     className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
                                 >
-                                    News
+                                    All Categories
+
+                                </Link>
+                                <Link to="/"
+
+                                    className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
+                                >
+                                    Business
                                 </Link>
 
                                 <Link to="/"
@@ -64,28 +71,40 @@ const Navbar = () => {
                                     className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
                                 >
 
-                                    Climates Crisis
+                                    Entertainment
                                 </Link>
 
                                 <Link to="/"
 
                                     className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
                                 >
-                                    Features
+                                    General
                                 </Link>
 
                                 <Link to="/"
 
                                     className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
                                 >
-                                    Economy
+                                    Health
                                 </Link>
 
                                 <Link to="/"
 
                                     className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
                                 >
-                                    Covid-19
+                                    Science
+                                </Link>
+                                <Link to="/"
+
+                                    className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
+                                >
+                                    Sports
+                                </Link>
+                                <Link to="/"
+
+                                    className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
+                                >
+                                    technology
                                 </Link>
                             </div>
                         </div>
@@ -113,9 +132,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div class=" hidden md:flex justify-around border-b-2  border-t-2 ">
-                <div>
-
-                    top News</div>
+                <div> top News</div>
                 <div>COVID-19</div>
                 <div>Reviews</div>
                 <div>Weather</div>

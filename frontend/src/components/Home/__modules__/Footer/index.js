@@ -9,22 +9,26 @@ const Footer = () => {
                 <div class="sm:flex sm:mt-8">
                     <div class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
                         <div class="flex flex-col">
-                            <span class="font-bold text-gray-700 uppercase mb-2">Footer header 1</span>
-                            <span class="my-2"><Link to="/" class="text-blue-700  text-md hover:text-blue-500">link 1</Link></span>
-                            <span class="my-2"><Link to="/" class="text-blue-700  text-md hover:text-blue-500">link 1</Link></span>
-                            <span class="my-2"><Link to="/" class="text-blue-700  text-md hover:text-blue-500">link 1</Link></span>
+                            <span class="font-bold text-gray-700 uppercase mb-2">About</span>
+                            <span class="my-2"><Link to="/" class="text-blue-700  text-md hover:text-blue-500">About Us</Link></span>
+                            <span class="my-2"><Link to="/" class="text-blue-700  text-md hover:text-blue-500">Terms and condition</Link></span>
+                            <span class="my-2"><Link to="/" class="text-blue-700  text-md hover:text-blue-500">Privacy Policy</Link></span>
                         </div>
                         <div class="flex flex-col">
-                            <span class="font-bold text-gray-700 uppercase mt-4 md:mt-0 mb-2">Footer header 2</span>
-                            <span class="my-2"><Link to="/" class="text-blue-700 text-md hover:text-blue-500">link 1</Link></span>
-                            <span class="my-2"><Link to="/" class="text-blue-700  text-md hover:text-blue-500">link 1</Link></span>
-                            <span class="my-2"><Link to="/" class="text-blue-700 text-md hover:text-blue-500">link 1</Link></span>
+                            <span class="font-bold text-gray-700 uppercase mt-4 md:mt-0 mb-2">Connect</span>
+                            <span class="my-2"><Link to="/" class="text-blue-700 text-md hover:text-blue-500">Contact Us</Link></span>
+                            <span class="my-2"><Link to="/" class="text-blue-700  text-md hover:text-blue-500">Submit a tip</Link></span>
+                            <span class="my-2"><Link to="/" class="text-blue-700 text-md hover:text-blue-500">Podcast</Link></span>
                         </div>
                         <div class="flex flex-col">
-                            <span class="font-bold text-gray-700 uppercase mt-4 md:mt-0 mb-2">Footer header 3</span>
-                            <span class="my-2"><Link to="/" class="text-blue-700  text-md hover:text-blue-500">link 1</Link></span>
-                            <span class="my-2"><Link to="/" class="text-blue-700  text-md hover:text-blue-500">link 1</Link></span>
-                            <span class="my-2"><Link to="/" class="text-blue-700  text-md hover:text-blue-500">link 1</Link></span>
+                            <span class="font-bold text-gray-700 uppercase mt-4 md:mt-0 mb-2">Language</span>
+                            <span class="my-2"><Link to="/" class="text-blue-700  text-md hover:text-blue-500">English</Link></span>
+                            <span class="my-2"><Link to="/" class="text-blue-700  text-md hover:text-blue-500">French</Link></span>
+                            <span class="my-2"><Link to="/" class="text-blue-700  text-md hover:text-blue-500">Swahili</Link></span>
+                            <span class="my-2"><Link to="/" class="text-blue-700  text-md hover:text-blue-500">Arabic</Link></span>
+
+
+
                         </div>
                     </div>
                 </div>

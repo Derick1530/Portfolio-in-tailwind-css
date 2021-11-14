@@ -1,6 +1,10 @@
 const ENDPOINTS = {
-  USERS: '/api/v1/user/agent',
-  USER_PROFILE: '/api/v1/user/profile',
+  TOP_HEADLINES: 'https://newsapi.org/v2/top-headlines?country=us&pageSize=1&apiKey=c909a8727ff34d88967e0c9aa2912703',
+  TOP_SIDENAVBAR: 'https://newsapi.org/v2/top-headlines?country=us&pageSize=9&apiKey=c909a8727ff34d88967e0c9aa2912703',
+  SHOW_MORE_INFO: 'https://newsapi.org/v2/top-headlines?sources=bbc-news&pageSize=5&apiKey=c909a8727ff34d88967e0c9aa2912703',
+  HEAD_INFO: 'https://newsapi.org/v2/top-headlines?sources=bbc-news&pageSize=4&apiKey=c909a8727ff34d88967e0c9aa2912703'
+
+
 };
 
 export default ENDPOINTS;
