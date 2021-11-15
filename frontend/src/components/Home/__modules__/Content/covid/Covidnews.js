@@ -1,14 +1,14 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-const ShowMore = () => {
+const CovidNews = () => {
     const [news, setNews] = useState()
 
     useEffect(() => {
         const getNews = async () => {
             try {
                 const { data } = await axios.get(
-                    `https://newsapi.org/v2/top-headlines?sources=bbc-news&pageSize=2&apiKey=c909a8727ff34d88967e0c9aa2912703`
+                    `https://newsapi.org/v2/everything?q=covid&apiKey=d2f5f511d7af43bc8189878f8ce74594&pageSize=5`
                 );
                 setNews(data.articles);
             } catch (error) {
@@ -25,16 +25,16 @@ const ShowMore = () => {
                 return <div class="md:w-full mb-4  p-6 shadow-md bg-white" key={item.id}>
                     <Link to={`/post/${item.title}`} >
                         <div class="flex h-full w-full justify-center">
-                            <div class="h-full py-2">
+                            <div class=" h-full py-2 bg-black">
                                 <img class="object-cover h-full w-full max-h-32 max-w-xs" src={item.urlToImage} alt="pic" />
                             </div>
-                            <div class=" p-2">
+                            <div class=" text-left w-full p-2">
                                 <p class=" text-sm font-extrabold pb-4">{item.title}</p>
-                                <p class=" text-sm">{item.description}</p>
+                                <p class="text-sm md:inline hidden">{item.description}</p>
 
                             </div>
                         </div>
-                        <div class="flex">
+                        <div class="flex my-2.5 ">
 
                             <p class="text-gray-300 mx-2">{item.publishedAt = new Date(item.publishedAt).toLocaleDateString()} by </p>
                             <p class="text-blue-400 font-semibold">{item.author}</p>
@@ -47,6 +47,6 @@ const ShowMore = () => {
     )
 }
 
-export default ShowMore
+export default CovidNews
 
 

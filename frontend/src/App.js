@@ -1,19 +1,32 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Post from './app/initials/Post';
-import { QueryClientProvider, QueryClient } from "react-query"
 import Homepage from './components/Home';
-const queryClient = new QueryClient();
+
+import Covid from './components/Home/__modules__/categories/Covid19';
+import AllCategories from "./components/Home/__modules__/categories/AllCategories"
+import BBCNews from './components/Home/__modules__/categories/BBC_news';
+import Dm from './components/Home/__modules__/Dm';
+import BBCnews from './components/Home/__modules__/categories/BBC_news';
+import TechCrunch from './components/Home/__modules__/categories/TechCrunch';
+import Navbar from './components/Home/__modules__/navbar';
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
 
-      <BrowserRouter>
-        <Routes>
-          <Route exact path="/" element={<Homepage />} />
-          <Route path="/post/:id" element={<Post />} />
-        </Routes>
-      </BrowserRouter>
-    </QueryClientProvider>
+
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Homepage />} />
+        <Route path="/post/:id" element={<Post />} />
+        <Route path="/Top_headlines" element={<Post />} />
+        {/* <Route path="" element={<BBCNews />} /> */}
+        <Route path="/covid_19" element={<Covid />} />
+        <Route path="/BBC_news" element={<BBCnews />} />
+        <Route path="/TechCrunch" element={<TechCrunch />} />
+        <Route path="/dm" element={<Dm />} />
+        <Route path="/all_categories" element={<AllCategories />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

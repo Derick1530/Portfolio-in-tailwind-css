@@ -1,35 +1,40 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import image from "./image1.jpg";
 import image2 from "./image2.jpg"
 import { Link } from 'react-router-dom';
-import { useHeadline } from '../../../../app/modules/hooks/useHeadline';
 import ForDigit from './fourDigit';
+import axios from 'axios';
 const Header = () => {
-    const onSuccess = (data) => {
-        console.log("Perform side effect after data fetching", data)
-    }
-    const onError = (data) => {
-        console.log("Perform side effect after Error encounter", data)
-    }
-    const { isLoading, data, isError, error, isFetching } = useHeadline(onSuccess, onError)
+    const [news, setNews] = useState()
 
-    if (isError) {
-        return <h2>{error.message}</h2>
-    }
+    useEffect(() => {
+        const getNews = async () => {
+            try {
+                const { data } = await axios.get(
+                    `https://newsapi.org/v2/top-headlines?country=us&pageSize=1&apiKey=4d31420538424d2c9d5fc30d50ce2482`
+                );
+                setNews(data.articles);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        getNews();
+    }, []);
     return (
         <>
             <div class="  mt-32  ">
                 {/* <div class=" w-11/12 block mx-auto my-0 "> */}
                 <div class="container h-full md:flex mx-auto p-6 shadow-sm bg-white ">
-                    {data?.data.articles.map((item, index) => {
+                    {news?.map((item, index) => {
                         return <div key={index} class=" md:w-1/2 pr-2 mb-8 bg-white ">
                             <div class="flex flex-col  ">
                                 <div class="w-full  ">
                                     <img class=" object-cover  w-screen max-h-72 " src={item.urlToImage} alt="pic" />
                                 </div>
                                 <div class=" p-4  mx-auto">
-                                    <h1 class="text-2xl font-extrabold md:text-4xl border-l-8">{item.title}</h1>
-                                    <p class="text-2xl font-thin">{item.description}</p>
+                                    <h1 class="text-2xl font-extrabold md:text-3xl border-l-8">{item.title}</h1>
+                                    <p class=" md:text-xl text-sm  font-thin">{item.description}</p>
 
                                 </div>
                             </div>
