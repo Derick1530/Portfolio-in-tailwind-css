@@ -36,7 +36,7 @@ const AllCategories = () => {
 
                     {allcategories.map((category) => <div key={category}
                         onClick={() => setKeyword(category)}
-                        className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">{category}</div>)}
+                        className="bg-gray-900 inline-flex items-center justify-center rounded-sm p-2 m-1 text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">{category}</div>)}
 
                 </div>
 

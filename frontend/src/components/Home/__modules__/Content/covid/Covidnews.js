@@ -22,10 +22,10 @@ const CovidNews = () => {
 
         <div>
             {news?.map((item, index) => {
-                return <div class="md:w-full mb-4  p-6 shadow-md bg-white" key={item.id}>
+                return <div class="md:w-full w-full mb-4  p-6 shadow-md bg-white" key={item.id}>
                     <Link to={`/post/${item.title}`} >
                         <div class="flex h-full w-full justify-center">
-                            <div class=" h-full py-2 bg-black">
+                            <div class=" h-full py-2 md:pr-4 pr:4">
                                 <img class="object-cover h-full w-full max-h-32 max-w-xs" src={item.urlToImage} alt="pic" />
                             </div>
                             <div class=" text-left w-full p-2">

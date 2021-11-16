@@ -4,14 +4,20 @@ import { Link } from "react-router-dom";
 import { Transition } from '@headlessui/react'
 import HumbMenu from '../svg/HumbMenu';
 import Cross from '../svg/Cross';
+import Search from '../svg/Search';
+import SearchField from './Search';
 const allcategories = ["all_categories", "Covid_19", "BBC_news", "TechCrunch"]
 
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
+    const toggle = () => setIsSearchOpen(!isSearchOpen);
+    console.log("isOpen?:", toggle)
+
     return (
-        <nav class="md:bg-white  bg-black shadow p-2 mt-0 fixed w-full z-10 top-0">
-            <div class="container mx-auto flex flex-wrap items-center">
+        <nav class=" shadow p-2 mt-0 fixed w-full z-10 top-0">
+            <div class="container bg-black md:bg-white   mx-auto flex flex-wrap items-center">
                 <div class="hidden md:flex w-full md:w-1/2 justify-center md:justify-start text-black font-extrabold">
                     <Link class=" " to="/">
                         <span class="text-2xl text-white pl-2"> Africa99.com</span>
@@ -26,7 +32,7 @@ const Navbar = () => {
                     <button
                         onClick={() => setIsOpen(!isOpen)}
                         type="button"
-                        className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                        className="bg-gray-900 inline-flex items-center justify-center p-2  text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                         aria-controls="mobile-menu"
                         aria-expanded="false"
                     >
@@ -51,9 +57,9 @@ const Navbar = () => {
                     leaveFrom="opacity-100 scale-100"
                     leaveTo="opacity-0 scale-95"
                 >
-
+                    <p>Search</p>
                     {
-                        allcategories.map((category) => <Link to={category} key={category}
+                        allcategories.map((category) => <Link to={category} onClick={() => setIsOpen(false)} key={category}
                             class="hover:bg-gray-700 hover:text-white text-white block px-3 py-2 rounded-md text-base font-medium">{category}</Link>)
                     }
 
@@ -64,24 +70,12 @@ const Navbar = () => {
                         allcategories.map((category) => <Link to={category} key={category}
                             className="hover:bg-gray-700 hover:text-white text-white  block px-3 py-2 rounded-md text-base font-medium">{category}</Link>)
                     }
+                    <button onClick={toggle}>
+                        <Search />
+                    </button>
                 </div>
             </div>
-
-            {/* <div class=" container mx-auto hidden md:flex justify-around border-b-2  border-t-2 ">
-                <div> top News</div>
-                <div>COVID-19</div>
-                <div>Reviews</div>
-                <div>Weather</div>
-                <div>News</div>
-                <div>Sories</div>
-                <div>Science and technology</div>
-                <div>Opinion</div>
-                <div>Video</div>
-                <div>Climate crisis</div>
-
-
-
-            </div> */}
+            <SearchField isOpen={isSearchOpen} />
 
         </nav >
     )

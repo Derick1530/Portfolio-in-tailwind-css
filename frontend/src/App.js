@@ -9,6 +9,8 @@ import Dm from './components/Home/__modules__/Dm';
 import BBCnews from './components/Home/__modules__/categories/BBC_news';
 import TechCrunch from './components/Home/__modules__/categories/TechCrunch';
 import Navbar from './components/Home/__modules__/navbar';
+
+import SearchData from './components/Home/__modules__/SearchData';
 function App() {
   return (
 
@@ -19,6 +21,7 @@ function App() {
         <Route exact path="/" element={<Homepage />} />
         <Route path="/post/:id" element={<Post />} />
         <Route path="/Top_headlines" element={<Post />} />
+        <Route path="/search/:id" element={<SearchData />} />
         {/* <Route path="" element={<BBCNews />} /> */}
         <Route path="/covid_19" element={<Covid />} />
         <Route path="/BBC_news" element={<BBCnews />} />
