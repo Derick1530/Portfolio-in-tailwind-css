@@ -13,14 +13,14 @@ const BBCnews = () => {
     useEffect(() => {
         const getComments = async () => {
             const res = await fetch(
-                `https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=c909a8727ff34d88967e0c9aa2912703&pageSize=${pageSize}`
+                `https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=00279f36e86d4a04bf15d9a84e4e31aa&pageSize=${pageSize}`
             );
             const limit = await fetch(
-                `https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=c909a8727ff34d88967e0c9aa2912703`
+                `https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=00279f36e86d4a04bf15d9a84e4e31aa`
             );
             const data = await res.json();
             const limitTot = await limit.json();
-            const total = limitTot.articles.length;
+            const total = limitTot.articles?.length;
             console.log(total);
             setpageCount(Math.ceil(total / pageSize));
             // console.log(Math.ceil(total/12));
@@ -35,7 +35,7 @@ const BBCnews = () => {
 
     const fetchComments = async (currentPage) => {
         const res = await fetch(
-            `https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=c909a8727ff34d88967e0c9aa2912703&&page=${currentPage}&pageSize=${pageSize}`
+            `https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=00279f36e86d4a04bf15d9a84e4e31aa&&page=${currentPage}&pageSize=${pageSize}`
             // `https://jsonplaceholder.typicode.com/comments?_page=${currentPage}&_limit=${limit}`
         );
         const data = await res.json();
@@ -43,7 +43,7 @@ const BBCnews = () => {
     };
 
     const handlePageClick = async (data) => {
-        console.log(data.selected);
+        // console.log(data.selected);
 
         let currentPage = data.selected + 1;
 

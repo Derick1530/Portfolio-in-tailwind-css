@@ -21,7 +21,7 @@ const TechCrunch = () => {
             const data = await res.json();
             const limitTot = await limit.json();
             const total = limitTot.articles.length;
-            console.log(total);
+            // console.log(total);
             setpageCount(Math.ceil(total / pageSize));
             // console.log(Math.ceil(total/12));
             setTechCrunchNews(data.articles);

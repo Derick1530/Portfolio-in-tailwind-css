@@ -6,6 +6,8 @@ import ReactPaginate from "react-paginate";
 const Covid = () => {
 
     let pageSize = 10;
+    const x = ['2', '3', '5', '8']
+    console.log("Let Try this:", x.splice(0, 2))
 
     const [covidNews, setCovidNews] = useState([]);
     const [pageCount, setpageCount] = useState(0);
@@ -20,8 +22,8 @@ const Covid = () => {
             );
             const data = await res.json();
             const limitTot = await limit.json();
-            const total = limitTot.articles.length;
-            console.log(total);
+            const total = limitTot?.articles.length;
+            // console.log(total);
             setpageCount(Math.ceil(total / pageSize));
             // console.log(Math.ceil(total/12));
             setCovidNews(data.articles);
@@ -43,7 +45,7 @@ const Covid = () => {
     };
 
     const handlePageClick = async (data) => {
-        console.log(data.selected);
+        // console.log(data.selected);
 
         let currentPage = data.selected + 1;
 
@@ -58,7 +60,7 @@ const Covid = () => {
 
     return (
         <>
-            <div class="container mx-auto">
+            <div class="container mx-auto mt-20">
                 {
                     covidNews?.map((item, index) => {
                         return <div key={index} class=" md:w-1/2 pr-2 mb-8 bg-white ">

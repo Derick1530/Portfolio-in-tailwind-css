@@ -35,9 +35,11 @@ const ShowMore = () => {
                             </div>
                         </div>
                         <div class="flex">
+                            <a href={item.url} target="_blank" rel="noreferrer">
 
-                            <p class="text-gray-300 text-left mx-2">{item.publishedAt = new Date(item.publishedAt).toLocaleDateString()} by </p>
-                            <p class="text-blue-400 font-semibold">{item.author}</p>
+                                <p class="text-gray-300 text-left mx-2">{item.publishedAt = new Date(item.publishedAt).toLocaleDateString()} by </p>
+                                <p class="text-blue-400 font-semibold">{item.author}</p>
+                            </a>
                         </div>
                     </Link>
                 </div>

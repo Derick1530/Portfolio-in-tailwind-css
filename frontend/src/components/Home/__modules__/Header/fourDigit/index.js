@@ -9,7 +9,7 @@ const ForDigit = () => {
         const getNews = async () => {
             try {
                 const { data } = await axios.get(
-                    `https://newsapi.org/v2/top-headlines?sources=bbc-news&pageSize=4&apiKey=c909a8727ff34d88967e0c9aa2912703`
+                    `https://newsapi.org/v2/top-headlines?sources=bbc-news&pageSize=4&page=2&apiKey=00279f36e86d4a04bf15d9a84e4e31aa`
                 );
                 setNews(data.articles);
             } catch (error) {
@@ -30,7 +30,11 @@ const ForDigit = () => {
                         <img class="object-cover h-full w-full max-h-32 max-w-xs" src={item.urlToImage} alt="pic" />
                     </div>
                     <div class=" p-2">
-                        <p class=" text-sm">{item.title}</p>
+                        <a href={item.url} target="_blank" rel="noreferrer">
+
+                            <p class=" text-sm font-bold">{item.title}</p>
+                            <p class=" text-sm text-blue-600">{item.author}</p>
+                        </a>
                     </div>
                 </div>
             })}

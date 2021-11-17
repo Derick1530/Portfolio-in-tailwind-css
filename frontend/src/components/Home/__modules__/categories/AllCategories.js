@@ -5,6 +5,7 @@ import Navbar from '../navbar';
 
 const allcategories = ["business", "entertainment", "general", "health", "science", "sports", "technology"]
 
+
 const AllCategories = () => {
 
 
@@ -31,7 +32,7 @@ const AllCategories = () => {
 
     return (
         <>
-            <div class="container mx-auto mt-32">
+            <div class="container mx-auto mt-20">
                 <div class="mdflex">
 
                     {allcategories.map((category) => <div key={category}

@@ -23,7 +23,8 @@ const CovidNews = () => {
         <div>
             {news?.map((item, index) => {
                 return <div class="md:w-full w-full mb-4  p-6 shadow-md bg-white" key={item.id}>
-                    <Link to={`/post/${item.title}`} >
+                    <a href={item.url} target="_blank" rel="noreferrer">
+
                         <div class="flex h-full w-full justify-center">
                             <div class=" h-full py-2 md:pr-4 pr:4">
                                 <img class="object-cover h-full w-full max-h-32 max-w-xs" src={item.urlToImage} alt="pic" />
@@ -39,7 +40,7 @@ const CovidNews = () => {
                             <p class="text-gray-300 mx-2">{item.publishedAt = new Date(item.publishedAt).toLocaleDateString()} by </p>
                             <p class="text-blue-400 font-semibold">{item.author}</p>
                         </div>
-                    </Link>
+                    </a>
                 </div>
             }
             )}
