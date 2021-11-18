@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
-import Cross from "../svg/Cross";
+import Cross from "../__modules__/svg/Cross";
 
 const Search = ({ isOpen, searchText }) => {
   const [text, setText] = useState("");

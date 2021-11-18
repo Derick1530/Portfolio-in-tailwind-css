@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import image from "./image1.jpg";
-import image2 from "./image2.jpg"
 import { Link } from 'react-router-dom';
 import ForDigit from './fourDigit';
 import axios from 'axios';

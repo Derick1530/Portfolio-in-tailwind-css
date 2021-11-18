@@ -2,9 +2,9 @@
 import { useState } from 'react'
 import { Link, } from "react-router-dom";
 import { Transition } from '@headlessui/react'
-import HumbMenu from '../svg/HumbMenu';
-import Cross from '../svg/Cross';
-import Search from '../svg/Search';
+import HumbMenu from '../__modules__/svg/HumbMenu';
+import Cross from '../__modules__/svg/Cross';
+import Search from '../__modules__/svg/Search';
 import SearchField from './Search';
 const allcategories = ["all_categories", "Covid_19", "BBC_news", "TechCrunch"]
 

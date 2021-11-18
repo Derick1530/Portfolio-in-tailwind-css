@@ -61,7 +61,7 @@ const BBCnews = () => {
             <div class="container mx-auto">
                 {
                     covidNews?.map((item, index) => {
-                        return <div key={index} class=" md:w-1/2 pr-2 mb-8 bg-white ">
+                        return <div key={index} class=" md:w-1/2 pr-2 mb-8 bg-white overflow-hidden ">
                             <div class="flex flex-col  ">
                                 <div class="w-full  ">
                                     <img class=" object-cover  w-screen max-h-72 " src={item.urlToImage} alt="pic" />

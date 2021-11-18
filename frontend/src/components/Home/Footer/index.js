@@ -22,8 +22,8 @@ const Footer = () => {
                         </div>
                         <div class="flex flex-col">
                             <span class="font-bold text-gray-700 uppercase mt-4 md:mt-0 mb-2">Language</span>
-                            <span class="my-2"><Link to="/" class="text-blue-700  text-md hover:text-blue-500">English</Link></span>
-                            <span class="my-2"><Link to="/" class="text-blue-700  text-md hover:text-blue-500">French</Link></span>
+                            <span class="my-2"><Link to="/" class="text-blue-700  text-md  hover:text-blue-500">English</Link></span>
+                            <span class="my-2"><Link to="/french" class="text-blue-700  text-md hover:text-blue-500">French</Link></span>
                             <span class="my-2"><Link to="/" class="text-blue-700  text-md hover:text-blue-500">Swahili</Link></span>
                             <span class="my-2"><Link to="/" class="text-blue-700  text-md hover:text-blue-500">Arabic</Link></span>
 
